@@ -5,9 +5,13 @@ key_down = keyboard_check(ord("S")) || keyboard_check(vk_down);
 
 #region MOVEMENT
 
-hsp_real += (key_right - key_left);
+var move_h = key_right - key_left;
+
+if (move_h != 0) hsp_real += move_h * accel;
+else hsp_real = lerp(hsp_real, 0, decel);
+if (hsp < 1) or (hsp > -1) and (move_h == 0) hsp = 0;
+
 hsp = clamp(hsp_real, -hsp_max, hsp_max);
-hsp_real = lerp(hsp_real, 0, 0.1);
 
 
 if (hsp > 0.75) or (hsp < -0.75)
@@ -36,7 +40,9 @@ if (place_meeting(x+hsp,y,obj_solid))
 	{
 		x += sign(hsp);
 	}
-	hsp = 0;
+	if (hsp > 9) or (hsp < -9) game_restart();
+	else hsp = 0;
+	hsp_real = 0;
 }
 
 if (place_meeting(x,y+vsp,obj_solid))
@@ -51,7 +57,7 @@ if (place_meeting(x,y+vsp,obj_solid))
 
 #region ANIMATION
 
-if (hsp > 0.75) or (hsp < -0.75)
+if (hsp > 2) or (hsp < -2)
 {
 	image_speed = 1;
 }
