@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_solid",
+  "name": "obj_solid_par",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
@@ -9,10 +9,7 @@
     "name": "SOLID",
     "path": "folders/Objects/SOLID.yy",
   },
-  "parentObjectId": {
-    "name": "obj_solid_par",
-    "path": "objects/obj_solid_par/obj_solid_par.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -28,10 +25,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_solid",
-    "path": "sprites/spr_solid/spr_solid.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

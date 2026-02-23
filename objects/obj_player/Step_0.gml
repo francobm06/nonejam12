@@ -14,7 +14,7 @@ if (hsp < 1) or (hsp > -1) and (move_h == 0) hsp = 0;
 hsp = clamp(hsp_real, -hsp_max, hsp_max);
 
 
-if (hsp > 0.75) or (hsp < -0.75)
+if (hsp > 2) or (hsp < -2)
 {
 	vsp = (key_down - key_up) * vsp_max;
 }
@@ -40,9 +40,16 @@ if (place_meeting(x+hsp,y,obj_solid))
 	{
 		x += sign(hsp);
 	}
-	if (hsp > 9) or (hsp < -9) game_restart();
-	else hsp = 0;
-	hsp_real = 0;
+	if (hsp > 2) or (hsp < -2) 
+	{
+		hsp = -hsp/4;
+		hsp_real = -hsp_real/4;
+	}
+	else
+	{
+		hsp = 0;
+		hsp_real = 0;
+	}
 }
 
 if (place_meeting(x,y+vsp,obj_solid))
