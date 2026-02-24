@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "text_scripts",
+  "name": "scr_dialogue",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

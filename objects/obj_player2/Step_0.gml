@@ -18,8 +18,7 @@ if (array_length(_arr) != 0) and (place_meeting(x,y+vsp,obj_solid_par)) vsp = 0;
 
 #endregion
 
-show_debug_message(hsp);
-if (hsp == 0)
+if (hsp == 0) or (place_meeting(x+sign(hsp),y,obj_solid))
 {
 	sprite_index = spr_player2;
 	image_index = 0;

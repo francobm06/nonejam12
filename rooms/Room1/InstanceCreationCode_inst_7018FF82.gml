@@ -1,2 +1,1 @@
-hsp = 9;
-hsp_real = 9999;
+scr_dialogue(obj_player,"oieeee",false,f_dialogue2);
