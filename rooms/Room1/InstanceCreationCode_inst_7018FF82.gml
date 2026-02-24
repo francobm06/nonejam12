@@ -1,1 +1,0 @@
-scr_dialogue(obj_player,"oieeee",false,f_dialogue2);

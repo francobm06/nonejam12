@@ -6,13 +6,10 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "SOLID",
-    "path": "folders/Objects/SOLID.yy",
+    "name": "META",
+    "path": "folders/Objects/META.yy",
   },
-  "parentObjectId": {
-    "name": "obj_solid_par",
-    "path": "objects/obj_solid_par/obj_solid_par.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -33,5 +30,5 @@
     "path": "sprites/spr_solid/spr_solid.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

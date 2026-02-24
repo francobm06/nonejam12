@@ -1,15 +1,22 @@
-spd = 0.5;
-letters = 0;
+enum Infos
+{
+	Text,
+	Color,
+	Follow,
+	Background,
+	Font
+}
 
-text = "";
-length = string_length(text);
-text_current = "";
+dialogue_id = "";
+text_grid = ds_grid_create(5, 0);
 
-font = noone;
-
-w = 0;
 h = 0;
 border = 10;
 
-background = true;
-follow = noone;
+page = 0;
+
+global.dialogue = true;
+
+char = 0;
+
+start = false;

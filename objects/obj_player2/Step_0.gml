@@ -1,24 +1,50 @@
 key_right = keyboard_check(ord("D")) || keyboard_check(vk_right);
 key_left = keyboard_check(ord("A")) || keyboard_check(vk_left);
 
-hsp = (key_right - key_left) * walksp;
-var onground = place_meeting(x,y+4,obj_solid_par);
+switch(state)
+{
+	case("free"):
+	{
+		hsp = (key_right - key_left) * walksp;
+		vsp += grv;
+		break;
+	}
+	case("freeze"):
+	{
+		hsp = 0;
+		vsp = 0;
+	}
+}
 
-vsp += grv;
+if (global.dialogue) state = "freeze";
+else state = "free";
 
 #region COLLISION
 
-if onground and !place_meeting(x,y+4,obj_solid) and vsp > 0
+if (place_meeting(x+hsp,y,obj_solid))
 {
-	while !place_meeting(x, y+1, obj_solid_slope) y += 1;
+	while (!place_meeting(x+sign(hsp),y,obj_solid))
+	{
+		x += sign(hsp);
+	}
+	hsp = 0;
+}
+if (place_meeting(x,y+vsp,obj_solid))
+{
+	while (!place_meeting(x,y+sign(vsp),obj_solid))
+	{
+		y += sign(vsp);
+	}
+	vsp = 0;
 }
 
-var _arr = move_and_collide(hsp, vsp, obj_solid_par);
-if (array_length(_arr) != 0) and (place_meeting(x,y+vsp,obj_solid_par)) vsp = 0;
+x += hsp;
+y += vsp;
 
 #endregion
 
-if (hsp == 0) or (place_meeting(x+sign(hsp),y,obj_solid))
+
+if (hsp == 0)
 {
 	sprite_index = spr_player2;
 	image_index = 0;

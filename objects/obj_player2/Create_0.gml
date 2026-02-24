@@ -3,3 +3,5 @@ vsp = 0;
 grv = 0.3;
 
 walksp = 1.5;
+
+state = "free";

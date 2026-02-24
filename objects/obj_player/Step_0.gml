@@ -25,11 +25,12 @@ switch(state)
 	}
 	case ("stall"):
 	{
-		if (move_h != 0) state = "free";
+		if (!global.dialogue) state = "free";
 		break;
 	}
 }
 
+if (global.dialogue) state = "stall";
 
 hsp = clamp(hsp_real, -hsp_max, hsp_max);
 

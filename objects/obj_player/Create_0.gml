@@ -1,5 +1,5 @@
-hsp = 7;
-hsp_real = 7;
+hsp = 8;
+hsp_real = 8;
 hsp_max = 15;
 
 accel = 0.2;
