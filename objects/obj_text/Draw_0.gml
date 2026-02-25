@@ -8,6 +8,10 @@ if (start)
 		draw_roundrect_ext(x-halfw-border,y-h-(border*2),x+halfw+border,y-border,15,15,false);
 		draw_sprite(spr_marker,0,x,y-border);
 	}
+	else 
+	{
+		if (char >= string_length(text_grid[# Infos.Text, page])+20) draw_sprite(spr_spacebar,0,x,yy+24);
+	}
 
 	var _text = string_copy(text_grid[# Infos.Text, page], 0, char);
 

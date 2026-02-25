@@ -1,7 +1,9 @@
+black = 6;
 switch (image_index)
 {
 	case(0):
 	{
+		window_set_cursor(cr_none);
 		room_goto(Room_transition1);
 		audio_play_sound(snd_start,1,false);
 		break;

@@ -12,8 +12,9 @@ switch(estado){
 	case "abrindo":
 		alpha = lerp(alpha,0,velocidade2);
 		
-		if(alpha == 0){
-			instance_destroy();	
+		if(alpha <= 0.05){
+			instance_destroy();
+			global.dialogue = false;
 		}
 	break;
 }

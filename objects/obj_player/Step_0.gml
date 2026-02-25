@@ -15,12 +15,13 @@ switch(state)
 {
 	case ("free"):
 	{
-		if (move_h != 0) hsp_real += move_h * accel;
+		if (move_h != 0) and (abs(hsp_real) < 15) hsp_real += move_h * accel;
 		else hsp_real = lerp(hsp_real, 0, decel);
 		if (hsp < 1) or (hsp > -1) and (move_h == 0) hsp = 0;
 
-		if (move_h != 0) vsp = (key_down - key_up) * vsp_max;
-		else vsp = lerp(vsp, 0, 0.1);
+		vsp = (key_down - key_up) * vsp_max;
+		//if (move_h != 0) vsp = (key_down - key_up) * vsp_max;
+		//else vsp = lerp(vsp, 0, 0.1);
 		break;
 	}
 	case ("stall"):
@@ -28,15 +29,51 @@ switch(state)
 		if (!global.dialogue) state = "free";
 		break;
 	}
+	case ("stop"):
+	{
+		hsp_real = lerp(hsp_real, 0, decel*2);
+		vsp = lerp(vsp,0,0.5);
+		if (!global.dialogue) state = "free";
+		break;
+	}
+	case ("jump"):
+	{
+		image_angle = lerp(image_angle,45*sign(image_xscale),0.7);
+		vsp += 0.6;
+		if (!place_meeting(x,y,obj_hole))
+		{
+			state = "free";
+			image_angle = 0;
+		}
+		break;
+	}
 }
-
-if (global.dialogue) state = "stall";
 
 hsp = clamp(hsp_real, -hsp_max, hsp_max);
 
+if (place_meeting(x,y,obj_hole))
+{
+	if (abs(hsp) < 8) and (!instance_exists(obj_death)) instance_create_layer(0,0,layer,obj_death);
+	else if (state != "jump")
+	{
+		state = "jump";
+		audio_play_sound(snd_jump,1,false);
+		vsp = -5;
+	}
+}
+
 // Particulas
+if (abs(hsp) > 1) //and ((state == "free") or (state == "jump"))
+{
+	if (!audio_is_playing(snd_engine)) audio_play_sound(snd_engine,1,true);
+	else audio_sound_pitch(snd_engine,max(0.5,abs(hsp)/4+random_range(-0.2,0.2)))
+}
+else audio_stop_sound(snd_engine);
 if ((hsp > 3) or (hsp < -3)) and alarm[0] == -1 alarm[0] = 5;
-if (hsp > 6) or (hsp < -6) instance_create_depth(x-12*image_xscale,y+18,depth+1,obj_motorcycle_trail);
+if (hsp > 6) or (hsp < -6) 
+{
+	if (!place_meeting(x,y,obj_hole)) instance_create_depth(x-12*image_xscale,y+18,depth+1,obj_motorcycle_trail);
+}
 
 #endregion
 

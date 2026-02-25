@@ -1,10 +1,7 @@
-alarm[0] = room_speed;
+if(instance_exists(obj_transition)) instance_destroy(obj_transition);
+alarm[0] = 3 * room_speed;
 global.dialogue = true;
 action = function()
 {
-	with(instance_create_layer(0,0,"Dialogue",obj_text))
-	{
-		dialogue_id = "dialogue1";
-	}
-	instance_destroy();
+	room_goto(Room_transition3);
 }

@@ -20,3 +20,5 @@ global.dialogue = true;
 char = 0;
 
 start = false;
+
+t = 0;
