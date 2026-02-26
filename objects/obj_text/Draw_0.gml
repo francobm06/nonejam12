@@ -2,11 +2,12 @@ if (start)
 {
 	var halfw = string_width(text_grid[# Infos.Text, page])/2;
 	
-	if (text_grid[# Infos.Background, page] == true)
+	if (text_grid[# Infos.Background, page] == true) // É balão de fala
 	{
 		draw_set_color(c_black);
 		draw_roundrect_ext(x-halfw-border,y-h-(border*2),x+halfw+border,y-border,15,15,false);
 		draw_sprite(spr_marker,0,x,y-border);
+		//if (char >= string_length(text_grid[# Infos.Text, page])+120) scr_dialogue_skip();
 	}
 	else 
 	{

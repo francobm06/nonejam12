@@ -1,2 +1,1 @@
-image_xscale += 0.1;
-
+if (xscale < 3) xscale += 0.1;

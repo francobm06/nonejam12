@@ -14,7 +14,7 @@ if (mouse_check_button_pressed(mb_left)) and (firingdelay <= 0)
 	recoil = 10;
 	with(instance_create_layer(x,y,layer,obj_bullet))
 	{
-		speed = 70;
+		speed = 30;
 		direction = point_direction(obj_player.x,obj_player.y,mouse_x,mouse_y) + random_range(-3,3);
 		image_angle = direction;
 	}

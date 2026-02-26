@@ -20,8 +20,6 @@ switch(state)
 		if (hsp < 1) or (hsp > -1) and (move_h == 0) hsp = 0;
 
 		vsp = (key_down - key_up) * vsp_max;
-		//if (move_h != 0) vsp = (key_down - key_up) * vsp_max;
-		//else vsp = lerp(vsp, 0, 0.1);
 		break;
 	}
 	case ("stall"):
@@ -40,30 +38,25 @@ switch(state)
 	{
 		image_angle = lerp(image_angle,45*sign(image_xscale),0.7);
 		vsp += 0.6;
-		if (!place_meeting(x,y,obj_hole))
-		{
-			state = "free";
-			image_angle = 0;
-		}
 		break;
 	}
 }
 
 hsp = clamp(hsp_real, -hsp_max, hsp_max);
 
-if (place_meeting(x,y,obj_hole))
+if (place_meeting(x,y,obj_hole)) and (state != "jump") and (!instance_exists(obj_death)) instance_create_layer(0,0,layer,obj_death);
+if (place_meeting(x,y,obj_slope))
 {
-	if (abs(hsp) < 8) and (!instance_exists(obj_death)) instance_create_layer(0,0,layer,obj_death);
-	else if (state != "jump")
+	if (abs(hsp) >= 9*other.image_xscale) and (state != "jump")
 	{
 		state = "jump";
 		audio_play_sound(snd_jump,1,false);
-		vsp = -5;
+		vsp = -6;
 	}
 }
 
 // Particulas
-if (abs(hsp) > 1) //and ((state == "free") or (state == "jump"))
+if (abs(hsp) > 1)
 {
 	if (!audio_is_playing(snd_engine)) audio_play_sound(snd_engine,1,true);
 	else audio_sound_pitch(snd_engine,max(0.5,abs(hsp)/4+random_range(-0.2,0.2)))
