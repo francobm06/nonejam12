@@ -8,11 +8,13 @@ if (state == "chase")
 }
 if (state == "dead")
 {
-	hsp_real = lerp(hsp_real,0,0.2);
+	hsp_real = lerp(hsp_real,0,0.05);
 	hsp = lerp(hsp,0,0.2);
+	image_alpha -= 0.01;
 	if (place_meeting(x,y,obj_enemy))
 	{
-		show_message("explodir");
+		explodir();
+		//with(other) explodir();
 	}
 }
 if (hp <= 0)
@@ -31,7 +33,8 @@ if (hp <= 0)
 			}
 		}
 		state = "dead";
-		alarm[0] = 2 * room_speed;
+		alarm[0] = 4 * room_speed; // Morrer
+		alarm[2] = 1; // Particula
 	}
 }
 
