@@ -1,5 +1,6 @@
 if (!damage)
 {	
+	instance_destroy(other);
 	hp--;
 	damage = true;
 	alarm[1] = room_speed/2;

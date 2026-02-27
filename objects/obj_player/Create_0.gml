@@ -14,7 +14,6 @@ state = "stall";
 
 instance_create_layer(x,y,layer,camera);
 
-
 pitch = 1;
 flash = 0;
 

@@ -1,0 +1,1 @@
+if (!instance_exists(obj_gun)) cursor_sprite = noone;

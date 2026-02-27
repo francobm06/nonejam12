@@ -4,36 +4,28 @@ dir_x = sign(obj_player.x - x);
 
 if (state == "chase")
 {
+	hsp_max = 18;
 	if (dir_x != 0) and (abs(hsp_real) < 30) hsp_real += dir_x * accel;
 	else hsp_real = lerp(hsp_real,0,decel);
 	y += ((obj_player.y - y)+yoffset) / yspeed;
-	if (alarm[1] == -1) alarm[1] = random_range(0.5,3) * room_speed;
+	if (alarm[1] == -1) alarm[1] = room_speed/2;
+}
+if (state == "dash")
+{
+	if (dir_x != 0) and (abs(hsp_real) < 30) hsp_real += dir_x * accel;
+	else hsp_real = lerp(hsp_real,0,decel);
+	hsp_max = 25;
+	if (place_meeting(x,y,obj_player)) state = "chase";
 }
 if (state == "dead")
 {
-	hsp_real = lerp(hsp_real,0,0.05);
-	hsp = lerp(hsp,0,0.2);
+	image_xscale = lerp(image_xscale,0,0.1);
+	image_yscale = lerp(image_xscale,0,0.1);
+	hsp = lerp(hsp,0,0.03);
+	hsp_real = lerp(hsp_real,0,0.03);
+	if (image_xscale <= 0) instance_destroy();
 }
-if (hp <= 0)
-{
-	if (state != "dead") 
-	{
-		repeat(irandom_range(20,30))
-		{
-			with(instance_create_layer(x,y,layer,obj_gun_part))
-			{
-				speed = 8;
-				direction = random(360);
-				sprite_index = spr_gun_part;
-				image_angle = direction;
-				image_index = irandom_range(0,image_number-1);
-			}
-		}
-		state = "dead";
-		alarm[0] = 3 * room_speed; // Morrer
-		alarm[2] = 1; // Particula
-	}
-}
+
 #endregion
 
 #region PARTICULAS

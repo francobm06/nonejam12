@@ -1,6 +1,7 @@
 state = 0;
 shoot = false;
-alarm[0] = irandom_range(2,5) * room_speed;
+//alarm[0] = random_range(1,2.7) * room_speed;
+alarm[0] = 0.5 * room_speed;
 
-xpos = 0;
 ypos = 0;
+audio_play_sound(snd_gun_pick,1,false);

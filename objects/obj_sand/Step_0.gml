@@ -4,5 +4,9 @@ if (!place_meeting(x,y,obj_trigger))
 }
 else
 {
-	if (alarm[0] == -1) alarm[0] = random_range(1,5);
+	if (!sound) 
+	{
+		alarm[0] = random_range(1,5); 
+		sound = true;
+	}
 }

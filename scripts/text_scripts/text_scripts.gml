@@ -5,14 +5,14 @@ function scr_texts()
 		case("dialogue0"):
 		{
 			scr_ds_grid_add_text("O mundo não acabou de uma vez.",c_red,noone,false,f_dialogue);
-			scr_ds_grid_add_text("Ele foi secando bem lentamente primeiro.",c_red,noone,false,f_dialogue);
-			scr_ds_grid_add_text("Não há mais nada para comer.\nNão há mais para onde ir.",c_red,noone,false,f_dialogue);
+			scr_ds_grid_add_text("Ele foi secando bem lentamente primeiro",c_red,noone,false,f_dialogue);
+			scr_ds_grid_add_text("Até não sobrar nada.",c_red,noone,false,f_dialogue);
 			break;
 		}
 		case("dialogue1"):
 		{
 			scr_ds_grid_add_text("Eu procuro por algo muito importante",c_red,noone,false,f_dialogue);
-			scr_ds_grid_add_text("Mas não sei exatamente o que é",c_red,noone,false,f_dialogue);
+			scr_ds_grid_add_text("Mas não lembro exatamente o que é",c_red,noone,false,f_dialogue);
 			break;
 		}
 		case("dialogue2"):
@@ -32,6 +32,7 @@ function scr_texts()
 			scr_ds_grid_add_text("você está chegando perto",c_teal,noone,false,f_dialogue);
 			scr_ds_grid_add_text("a perseverança é a assinatura do inconformado",c_teal,noone,false,f_dialogue);
 			scr_ds_grid_add_text("nunca pare de seguir em frente",c_teal,noone,false,f_dialogue);
+			scr_ds_grid_add_text("nunca pare de seguir em frente",c_teal,noone,false,f_dialogue);
 			scr_ds_grid_add_text("nunca pare de seguir em frentenunca pare de seguir em frentenunca pare de seguir em frentenunca pare de seguir em frenteNUNCANUNCANUNCANUNCANUNCA",c_teal,noone,false,f_dialogue);
 			break;
 		}
@@ -46,7 +47,7 @@ function scr_texts()
 			scr_ds_grid_add_text("...",c_white,obj_npc,true,f_dialogue2);
 			scr_ds_grid_add_text("O que você faz por essas bandas?",c_white,obj_npc,true,f_dialogue2);
 			scr_ds_grid_add_text("...",c_white,obj_player,true,f_dialogue2);
-			scr_ds_grid_add_text("Eu estou procurando por algo... importante...",c_white,obj_player,true,f_dialogue2);
+			scr_ds_grid_add_text("Eu estou procurando por algo...",c_white,obj_player,true,f_dialogue2);
 			scr_ds_grid_add_text("...",c_white,obj_npc,true,f_dialogue2);
 			scr_ds_grid_add_text("Difícil você encontrar algo de útil por aqui, amigo...",c_white,obj_npc,true,f_dialogue2);
 			scr_ds_grid_add_text("Mas... Boa sorte!",c_white,obj_npc,true,f_dialogue2);
@@ -61,13 +62,17 @@ function scr_texts()
 		case("dialogue5"):
 		{
 			scr_ds_grid_add_text("...",c_white,obj_enemy,true,f_dialogue2);
-			scr_ds_grid_add_text("Posso ajudar?",c_white,obj_enemy,true,f_dialogue2);
+			scr_ds_grid_add_text("Posso ajudar, amigão?",c_white,obj_enemy,true,f_dialogue2);
 			scr_ds_grid_add_text("...",c_white,obj_player,true,f_dialogue2);
 			scr_ds_grid_add_text("Eu preciso passar por aqui.",c_white,obj_player,true,f_dialogue2);
-			scr_ds_grid_add_text("Aqui é nosso território.",c_white,obj_enemy,true,f_dialogue2);
+			scr_ds_grid_add_text("...",c_white,obj_enemy,true,f_dialogue2);
+			scr_ds_grid_add_text("HAHA",c_white,obj_enemy,true,f_dialogue2);
+			scr_ds_grid_add_text("Aqui é NOSSO território.",c_white,obj_enemy,true,f_dialogue2);
 			scr_ds_grid_add_text("Sem chance.",c_white,obj_enemy,true,f_dialogue2);
 			scr_ds_grid_add_text("...",c_white,obj_player,true,f_dialogue2);
-			scr_ds_grid_add_text("Eu preciso passar por aqui.",c_white,obj_player,true,f_dialogue2);
+			scr_ds_grid_add_text("...",c_white,obj_enemy,true,f_dialogue2);
+			scr_ds_grid_add_text("Tudo bem, então.",c_white,obj_enemy,true,f_dialogue2);
+			scr_ds_grid_add_text("Eu vou te dar uma ''ajudinha'' para sair",c_white,obj_enemy,true,f_dialogue2);
 			break;
 		}
 		case("dialogue6"):
@@ -78,8 +83,31 @@ function scr_texts()
 		}
 		case("dialogue7"):
 		{
+			scr_ds_grid_add_text("...Acho que não importa mais...",c_teal,noone,false,f_dialogue);
 			scr_ds_grid_add_text("Acorde.",c_teal,noone,false,f_dialogue);
 			scr_ds_grid_add_text("Eles estão atrás de você.",c_teal,noone,false,f_dialogue);
+			break;
+		}
+		case("dialogue8"):
+		{
+			scr_ds_grid_add_text("Eu só queria entender isso tudo...",c_red,noone,false,f_dialogue);
+			scr_ds_grid_add_text("Nada parece fazer sentido",c_red,noone,false,f_dialogue);
+			break;
+		}
+		case("dialogue9"):
+		{
+			scr_ds_grid_add_text("Nada se encaixa, nada...",c_red,noone,false,f_dialogue);
+			break;
+		}
+		case("dialogue10"):
+		{
+			scr_ds_grid_add_text("...Ainda sobrou um...",c_teal,noone,false,f_dialogue);
+			break;
+		}
+		case("dialogue11"):
+		{
+			scr_ds_grid_add_text("Você...",c_white,obj_boss,true,f_dialogue2);
+			scr_ds_grid_add_text("Você já era.",c_white,obj_boss,true,f_dialogue2);
 			break;
 		}
 	}

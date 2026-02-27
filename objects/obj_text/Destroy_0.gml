@@ -40,4 +40,30 @@ switch(room)
 		room_goto(Room8);
 		break;
 	}
+	case(Room_transition8):
+	{
+		with(instance_create_layer(0,0,layer,obj_trigger))
+		{
+			alarm[0] = room_speed;
+			action = function()
+			{
+				room_goto(Room7);
+			}
+		}
+		break;
+	}
+	case(Room_transition9): room_goto(Room9); break;
+	case(Room_transition10): room_goto(Room10); break;
+	case(Room_transition12): room_goto(Room11); break;
+	case(Room11):
+	{
+		with(obj_player) state = "free";
+		with(obj_boss)
+		{
+			instance_create_layer(0,0,"Instances",obj_gun);
+			state = "chase";
+			alarm[4] = 3 * room_speed;
+		}
+		break;
+	}
 }

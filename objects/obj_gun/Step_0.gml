@@ -1,7 +1,7 @@
 // Isso aqui gira a arma
 image_angle = point_direction(obj_player.x, obj_player.y, mouse_x, mouse_y);
-x = obj_player.x + lengthdir_x(48-recoil, image_angle);
-y = obj_player.y + lengthdir_y(48-recoil, image_angle);
+x = obj_player.x + lengthdir_x(36-recoil, image_angle);
+y = obj_player.y + lengthdir_y(36-recoil, image_angle);
 
 recoil = lerp(recoil,0,0.1);
 

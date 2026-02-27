@@ -51,7 +51,7 @@ switch(state)
 
 hsp = clamp(hsp_real, -hsp_max, hsp_max);
 
-if (place_meeting(x,y,obj_hole)) and (state != "jump") and (!instance_exists(obj_death)) instance_create_layer(0,0,layer,obj_death);
+if (place_meeting(x,y,obj_hole)) and (!place_meeting(x,y,obj_ground)) and (!instance_exists(obj_death)) instance_create_layer(0,0,layer,obj_death);
 if (place_meeting(x,y,obj_slope))
 {
 	if (abs(hsp) >= 9*other.image_xscale) and (state != "jump")

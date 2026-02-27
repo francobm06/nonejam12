@@ -3,14 +3,14 @@ flash = 0;
 
 hsp = 0;
 hsp_real = 0;
-hsp_max = random_range(13,17);
+hsp_max = random_range(14,15);
 
 accel = 0.5;
 decel = 0.02;
 dir_x = 0;
 
 yoffset = random_range(-48,48);
-yspeed = irandom_range(8,10);
+yspeed = irandom_range(15,20);
 
 state = "chase";
 

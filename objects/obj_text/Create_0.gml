@@ -22,3 +22,4 @@ char = 0;
 start = false;
 
 t = 0;
+if (text_grid[# Infos.Background, page] == false) cursor_sprite = noone;
