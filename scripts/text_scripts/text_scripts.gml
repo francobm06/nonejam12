@@ -72,7 +72,12 @@ function scr_texts()
 		}
 		case("dialogue6"):
 		{
-			scr_ds_grid_add_text("A vida costumava ser muito boa...",c_teal,noone,false,f_dialogue);
+			scr_ds_grid_add_text("A vida costumava ser muito boa... Não é?",c_teal,noone,false,f_dialogue);
+			scr_ds_grid_add_text("...O que você está fazendo aí afinal?",c_teal,noone,false,f_dialogue);
+			break;
+		}
+		case("dialogue7"):
+		{
 			scr_ds_grid_add_text("Acorde.",c_teal,noone,false,f_dialogue);
 			scr_ds_grid_add_text("Eles estão atrás de você.",c_teal,noone,false,f_dialogue);
 			break;

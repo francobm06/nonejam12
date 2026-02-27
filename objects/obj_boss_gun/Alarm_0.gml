@@ -1,0 +1,1 @@
+instance_create_layer(obj_player.x,obj_player.y,"Dialogue",obj_cursor_boss);

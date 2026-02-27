@@ -7,7 +7,7 @@ if (state == "chase")
 	if (dir_x != 0) and (abs(hsp_real) < 30) hsp_real += dir_x * accel;
 	else hsp_real = lerp(hsp_real,0,decel);
 	y += ((obj_player.y - y)+yoffset) / yspeed;
-	if (alarm[1] == -1) alarm[1] = random_range(3,7) * room_speed;
+	if (alarm[1] == -1) alarm[1] = random_range(2,4) * room_speed;
 }
 if (state == "dead")
 {
@@ -18,6 +18,11 @@ if (state == "walk")
 {
 	hsp = -1;
 	hsp_real = -1;
+}
+if (state == "wait")
+{
+	//if (collision_circle(x,y,256,obj_player,false,false)) state = "chase";
+	if (collision_rectangle(x-128,0,x+128,room_height,obj_player,false,false)) state = "chase";
 }
 if (hp <= 0)
 {

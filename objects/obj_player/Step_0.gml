@@ -40,6 +40,13 @@ switch(state)
 		vsp += 0.6;
 		break;
 	}
+	case ("stop2"):
+	{
+		hsp_real = 0;
+		hsp = 0;
+		vsp = 0;
+		break;
+	}
 }
 
 hsp = clamp(hsp_real, -hsp_max, hsp_max);

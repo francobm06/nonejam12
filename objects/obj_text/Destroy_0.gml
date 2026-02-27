@@ -30,8 +30,14 @@ switch(room)
 	}
 	case(Room6):
 	{
+		with(obj_player) state = "stop2";
 		with(obj_enemy) state = "walk";
 		instance_create_layer(0,0,"Instances",obj_gun_fake);
+		break;
+	}
+	case(Room_transition7):
+	{
+		room_goto(Room8);
 		break;
 	}
 }
