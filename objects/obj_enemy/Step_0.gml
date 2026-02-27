@@ -1,6 +1,9 @@
+dir_x = sign(obj_player.x - x);
+
+#region STATE MACHINE
+
 if (state == "chase")
 {
-	var dir_x = sign(obj_player.x - x);
 	if (dir_x != 0) and (abs(hsp_real) < 30) hsp_real += dir_x * accel;
 	else hsp_real = lerp(hsp_real,0,decel);
 	y += ((obj_player.y - y)+yoffset) / yspeed;
@@ -10,12 +13,11 @@ if (state == "dead")
 {
 	hsp_real = lerp(hsp_real,0,0.05);
 	hsp = lerp(hsp,0,0.2);
-	image_alpha -= 0.01;
-	if (place_meeting(x,y,obj_enemy))
-	{
-		explodir();
-		//with(other) explodir();
-	}
+}
+if (state == "walk")
+{
+	hsp = -1;
+	hsp_real = -1;
 }
 if (hp <= 0)
 {
@@ -33,11 +35,41 @@ if (hp <= 0)
 			}
 		}
 		state = "dead";
-		alarm[0] = 4 * room_speed; // Morrer
+		alarm[0] = 3 * room_speed; // Morrer
 		alarm[2] = 1; // Particula
 	}
 }
+#endregion
 
-if (hsp != 0) image_xscale = sign(hsp);
+#region PARTICULAS
+
+
+if (abs(hsp) > 1)
+{
+	if (!audio_is_playing(snd_engine2)) audio_play_sound(snd_engine2,1,true);
+	else audio_sound_pitch(snd_engine2,max(0.5,abs(hsp)/4+random_range(-0.2,0.2)))
+}
+else audio_stop_sound(snd_engine2);
+if (abs(hsp) > 3) and alarm[3] == -1 alarm[3] = 5;
+if (abs(hsp) > 6) instance_create_depth(x-12*image_xscale,y+18,depth+1,obj_motorcycle_trail);
+
+#endregion
+
+#region ANIMATION
+
+
 hsp = clamp(hsp_real, -hsp_max, hsp_max);
 x += hsp;
+
+if (hsp > 2) or (hsp < -2)
+{
+	image_speed = 1;
+}
+else
+{
+	image_speed = 0;
+	image_index = 0;
+}
+if (dir_x != 0) image_xscale = dir_x;
+
+#endregion

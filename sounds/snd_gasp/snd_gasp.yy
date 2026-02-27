@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 1.201633,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "GAME",
+    "path": "folders/Sounds/SFX/GAME.yy",
   },
   "preload": false,
   "sampleRate": 44100,

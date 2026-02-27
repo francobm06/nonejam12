@@ -55,6 +55,9 @@ if (place_meeting(x,y,obj_slope))
 	}
 }
 
+#endregion
+
+#region PARTICULAS
 // Particulas
 if (abs(hsp) > 1)
 {
@@ -70,6 +73,14 @@ if (hsp > 6) or (hsp < -6)
 
 #endregion
 
+#region MORTE
+
+if (hp <= 0)
+{
+	if (!instance_exists(obj_death)) instance_create_layer(0,0,layer,obj_death);
+}
+
+#endregion
 
 #region COLLISION
 if (place_meeting(x+hsp,y,obj_solid))

@@ -30,24 +30,51 @@ function scr_texts()
 		case("dialoguedream"):
 		{
 			scr_ds_grid_add_text("você está chegando perto",c_teal,noone,false,f_dialogue);
+			scr_ds_grid_add_text("a perseverança é a assinatura do inconformado",c_teal,noone,false,f_dialogue);
 			scr_ds_grid_add_text("nunca pare de seguir em frente",c_teal,noone,false,f_dialogue);
-			scr_ds_grid_add_text("nunca pare de seguir em frente",c_teal,noone,false,f_dialogue);
-			scr_ds_grid_add_text("nunca pare de seguir em frentenunca pare de seguir em frentenunca pare de seguir em frentenunca pare de seguir guir em frentenunca pare de seguir guir",c_teal,noone,false,f_dialogue);
+			scr_ds_grid_add_text("nunca pare de seguir em frentenunca pare de seguir em frentenunca pare de seguir em frentenunca pare de seguir em frenteNUNCANUNCANUNCANUNCANUNCA",c_teal,noone,false,f_dialogue);
 			break;
 		}
 		case("dialogue4"):
 		{
-			scr_ds_grid_add_text("Mais um sonho estranho...",c_white,obj_player,true,f_dialogue2);
+			scr_ds_grid_add_text("Ei, amigo!",c_white,obj_npc,true,f_dialogue2);
+			scr_ds_grid_add_text("Você está bem?",c_white,obj_npc,true,f_dialogue2);
+			scr_ds_grid_add_text("...",c_white,obj_player,true,f_dialogue2);
+			scr_ds_grid_add_text("Quem é você?",c_white,obj_player,true,f_dialogue2);
+			scr_ds_grid_add_text("Eu só estou de passagem",c_white,obj_npc,true,f_dialogue2);
+			scr_ds_grid_add_text("Te encontrei desmaiado em cima da moto...",c_white,obj_npc,true,f_dialogue2);
+			scr_ds_grid_add_text("...",c_white,obj_npc,true,f_dialogue2);
+			scr_ds_grid_add_text("O que você faz por essas bandas?",c_white,obj_npc,true,f_dialogue2);
+			scr_ds_grid_add_text("...",c_white,obj_player,true,f_dialogue2);
+			scr_ds_grid_add_text("Eu estou procurando por algo... importante...",c_white,obj_player,true,f_dialogue2);
+			scr_ds_grid_add_text("...",c_white,obj_npc,true,f_dialogue2);
+			scr_ds_grid_add_text("Difícil você encontrar algo de útil por aqui, amigo...",c_white,obj_npc,true,f_dialogue2);
+			scr_ds_grid_add_text("Mas... Boa sorte!",c_white,obj_npc,true,f_dialogue2);
+			scr_ds_grid_add_text("Enfim... Eu só vim aqui te avisar o seguinte...",c_white,obj_npc,true,f_dialogue2);
+			scr_ds_grid_add_text("Tem uns caras querendo arrumar confusão mais pra frente",c_white,obj_npc,true,f_dialogue2);
+			scr_ds_grid_add_text("Eu não iria lá se fosse você...",c_white,obj_npc,true,f_dialogue2);
+			scr_ds_grid_add_text("...",c_white,obj_npc,true,f_dialogue2);
+			scr_ds_grid_add_text("Bom... Você quem sabe...",c_white,obj_npc,true,f_dialogue2);
+			
 			break;
 		}
 		case("dialogue5"):
 		{
-			scr_ds_grid_add_text("Ei, amigo!",c_white,obj_npc,true,f_dialogue2);
-			scr_ds_grid_add_text("Tem uns caras querendo arrumar confusão mais pra frente",c_white,obj_npc,true,f_dialogue2);
-			scr_ds_grid_add_text("Eu não iria lá se fosse você",c_white,obj_npc,true,f_dialogue2);
+			scr_ds_grid_add_text("...",c_white,obj_enemy,true,f_dialogue2);
+			scr_ds_grid_add_text("Posso ajudar?",c_white,obj_enemy,true,f_dialogue2);
 			scr_ds_grid_add_text("...",c_white,obj_player,true,f_dialogue2);
-			scr_ds_grid_add_text("...",c_white,obj_npc,true,f_dialogue2);
-			scr_ds_grid_add_text("Bom... Você quem sabe...",c_white,obj_npc,true,f_dialogue2);
+			scr_ds_grid_add_text("Eu preciso passar por aqui.",c_white,obj_player,true,f_dialogue2);
+			scr_ds_grid_add_text("Aqui é nosso território.",c_white,obj_enemy,true,f_dialogue2);
+			scr_ds_grid_add_text("Sem chance.",c_white,obj_enemy,true,f_dialogue2);
+			scr_ds_grid_add_text("...",c_white,obj_player,true,f_dialogue2);
+			scr_ds_grid_add_text("Eu preciso passar por aqui.",c_white,obj_player,true,f_dialogue2);
+			break;
+		}
+		case("dialogue6"):
+		{
+			scr_ds_grid_add_text("A vida costumava ser muito boa...",c_teal,noone,false,f_dialogue);
+			scr_ds_grid_add_text("Acorde.",c_teal,noone,false,f_dialogue);
+			scr_ds_grid_add_text("Eles estão atrás de você.",c_teal,noone,false,f_dialogue);
 			break;
 		}
 	}

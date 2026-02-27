@@ -28,4 +28,10 @@ switch(room)
 		}
 		break;
 	}
+	case(Room6):
+	{
+		with(obj_enemy) state = "walk";
+		instance_create_layer(0,0,"Instances",obj_gun_fake);
+		break;
+	}
 }

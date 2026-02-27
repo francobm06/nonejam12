@@ -2,6 +2,8 @@ hsp = 0;
 hsp_real = 0;
 hsp_max = 15;
 
+hp = 5;
+
 accel = 0.2;
 decel = 0.01;
 

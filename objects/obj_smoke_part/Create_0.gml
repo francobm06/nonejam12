@@ -1,1 +1,1 @@
-decrease = random_range(0.08,0.1);
+decrease = random_range(0.04,0.08);

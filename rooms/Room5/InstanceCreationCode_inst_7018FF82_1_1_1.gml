@@ -1,6 +1,3 @@
-hsp = 10;
-hsp_real = 30;
-
 state = "stop";
 global.dialogue = true;
 
