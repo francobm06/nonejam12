@@ -101,13 +101,27 @@ function scr_texts()
 		}
 		case("dialogue10"):
 		{
-			scr_ds_grid_add_text("...Ainda sobrou um...",c_teal,noone,false,f_dialogue);
+			scr_ds_grid_add_text("Não se distraia.",c_teal,noone,false,f_dialogue);
+			scr_ds_grid_add_text("...Ainda restou um.",c_teal,noone,false,f_dialogue);
 			break;
 		}
 		case("dialogue11"):
 		{
 			scr_ds_grid_add_text("Você...",c_white,obj_boss,true,f_dialogue2);
 			scr_ds_grid_add_text("Você já era.",c_white,obj_boss,true,f_dialogue2);
+			break;
+		}
+		case("dialogue12"):
+		{
+			scr_ds_grid_add_text("Eu sigo em frente.",c_red,noone,false,f_dialogue);
+			break;
+		}
+		case("dialogue13"):
+		{
+			scr_ds_grid_add_text("Eu...",c_red,noone,false,f_dialogue);
+			scr_ds_grid_add_text("...sigo...",c_red,noone,false,f_dialogue);
+			scr_ds_grid_add_text("...em...",c_red,noone,false,f_dialogue);
+			scr_ds_grid_add_text("...frente.",c_red,noone,false,f_dialogue);
 			break;
 		}
 	}

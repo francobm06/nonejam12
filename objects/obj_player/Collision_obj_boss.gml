@@ -1,6 +1,6 @@
 if (!damage)
 {	
-	hp -= 2;
+	hp -= 1;
 	damage = true;
 	alarm[1] = room_speed/2;
 	

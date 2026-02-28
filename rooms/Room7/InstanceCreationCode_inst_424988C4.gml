@@ -1,4 +1,4 @@
-alarm[0] = 3 * room_speed;
+alarm[0] = 2 * room_speed;
 audio_play_sound(snd_stinger,1,false);
 action = function()
 {

@@ -66,4 +66,5 @@ switch(room)
 		}
 		break;
 	}
+	case(Room_transition13): room_goto(Room14); break;
 }

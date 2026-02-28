@@ -1,3 +1,3 @@
-hsp = 5;
-hsp_real = 5;
+hsp = 8;
+hsp_real = 8;
 global.dialogue = false;
