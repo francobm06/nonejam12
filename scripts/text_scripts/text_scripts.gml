@@ -5,7 +5,7 @@ function scr_texts()
 		case("dialogue0"):
 		{
 			scr_ds_grid_add_text("O mundo não acabou de uma vez.",c_red,noone,false,f_dialogue);
-			scr_ds_grid_add_text("Ele foi secando bem lentamente primeiro",c_red,noone,false,f_dialogue);
+			scr_ds_grid_add_text("Ele foi secando lentamente primeiro",c_red,noone,false,f_dialogue);
 			scr_ds_grid_add_text("Até não sobrar nada.",c_red,noone,false,f_dialogue);
 			break;
 		}
@@ -71,8 +71,7 @@ function scr_texts()
 			scr_ds_grid_add_text("Sem chance.",c_white,obj_enemy,true,f_dialogue2);
 			scr_ds_grid_add_text("...",c_white,obj_player,true,f_dialogue2);
 			scr_ds_grid_add_text("...",c_white,obj_enemy,true,f_dialogue2);
-			scr_ds_grid_add_text("Tudo bem, então.",c_white,obj_enemy,true,f_dialogue2);
-			scr_ds_grid_add_text("Eu vou te dar uma ''ajudinha'' para sair",c_white,obj_enemy,true,f_dialogue2);
+			scr_ds_grid_add_text("Vou te dar uma ajudinha pra sair",c_white,obj_enemy,true,f_dialogue2);
 			break;
 		}
 		case("dialogue6"):
@@ -122,6 +121,19 @@ function scr_texts()
 			scr_ds_grid_add_text("...sigo...",c_red,noone,false,f_dialogue);
 			scr_ds_grid_add_text("...em...",c_red,noone,false,f_dialogue);
 			scr_ds_grid_add_text("...frente.",c_red,noone,false,f_dialogue);
+			break;
+		}
+		case("dialogue14"):
+		{
+			scr_ds_grid_add_text("...",c_white,obj_player,true,f_dialogue2);
+			scr_ds_grid_add_text("...O... O quê?",c_white,obj_player,true,f_dialogue2);
+			scr_ds_grid_add_text("...Eu pensei que você fosse... Eu?",c_white,obj_player,true,f_dialogue2);
+			scr_ds_grid_add_text("...Quem... é você?",c_white,obj_player,true,f_dialogue2);
+			scr_ds_grid_add_text("...",c_white,obj_trigger,true,f_dialogue2);
+			scr_ds_grid_add_text("Não era para você estar aqui.",c_white,obj_trigger,true,f_dialogue2);
+			scr_ds_grid_add_text("Quem foi que te deixou passar?",c_white,obj_trigger,true,f_dialogue2);
+			scr_ds_grid_add_text("...",c_white,obj_player,true,f_dialogue2);
+			scr_ds_grid_add_text("...O quê?...",c_white,obj_player,true,f_dialogue2);
 			break;
 		}
 	}

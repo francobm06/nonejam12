@@ -11,8 +11,9 @@ vsp = 0;
 vsp_max = 4;
 
 state = "stall";
+xscale = image_xscale;
 
-instance_create_layer(x,y,layer,camera);
+if (room != Room_cutscene4)	instance_create_layer(x,y,layer,camera);
 
 pitch = 1;
 flash = 0;

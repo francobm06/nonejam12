@@ -129,7 +129,7 @@ else
 	image_speed = 0;
 	image_index = 0;
 }
-if (hsp != 0) image_xscale = sign(hsp);
+if (hsp != 0) image_xscale = sign(hsp)*xscale;
 
 #endregion
 

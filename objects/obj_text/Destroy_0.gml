@@ -57,7 +57,12 @@ switch(room)
 	case(Room_transition12): room_goto(Room11); break;
 	case(Room11):
 	{
-		with(obj_player) state = "free";
+		with(obj_player)
+		{
+			state = "free";
+			hsp = 13;
+			hsp_real = 13;
+		}
 		with(obj_boss)
 		{
 			instance_create_layer(0,0,"Instances",obj_gun);
@@ -67,4 +72,18 @@ switch(room)
 		break;
 	}
 	case(Room_transition13): room_goto(Room14); break;
+	case(Room_transition14): room_goto(Room15); break;
+	case(Room_cutscene4): 
+	{
+		with(obj_player2_dummy) alarm[0] = sp;
+		with(instance_create_layer(-32,-32,"Instances",obj_trigger))
+		{
+			alarm[0] = 12 * room_speed;
+			action = function()
+			{
+				room_goto(Room16);
+			}
+		}
+		break;
+	}
 }
