@@ -36,6 +36,7 @@
     {"name":"TILES","order":14,"path":"folders/Sprites/TILES.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"FILLER","order":16,"path":"folders/Rooms/FILLER.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"scr_freeze","order":4,"path":"scripts/scr_freeze/scr_freeze.yy",},

@@ -47,6 +47,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"TILES","folderPath":"folders/Sprites/TILES.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"FILLER","folderPath":"folders/Rooms/FILLER.yy",},
   ],
   "IncludedFiles": [],
   "isEcma": false,
@@ -120,6 +121,7 @@
     {"id":{"name":"obj_boss_gun","path":"objects/obj_boss_gun/obj_boss_gun.yy",},},
     {"id":{"name":"Room_transition5","path":"rooms/Room_transition5/Room_transition5.yy",},},
     {"id":{"name":"spr_trail","path":"sprites/spr_trail/spr_trail.yy",},},
+    {"id":{"name":"Room_filler1","path":"rooms/Room_filler1/Room_filler1.yy",},},
     {"id":{"name":"Room6","path":"rooms/Room6/Room6.yy",},},
     {"id":{"name":"Room10","path":"rooms/Room10/Room10.yy",},},
     {"id":{"name":"snd_explosion","path":"sounds/snd_explosion/snd_explosion.yy",},},
@@ -274,6 +276,7 @@
     {"roomId":{"name":"Room17","path":"rooms/Room17/Room17.yy",},},
     {"roomId":{"name":"Room_transition17","path":"rooms/Room_transition17/Room_transition17.yy",},},
     {"roomId":{"name":"Room_credits","path":"rooms/Room_credits/Room_credits.yy",},},
+    {"roomId":{"name":"Room_filler1","path":"rooms/Room_filler1/Room_filler1.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [
