@@ -36,7 +36,6 @@
     {"name":"TILES","order":14,"path":"folders/Sprites/TILES.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"FILLER","order":16,"path":"folders/Rooms/FILLER.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"scr_freeze","order":4,"path":"scripts/scr_freeze/scr_freeze.yy",},
@@ -119,6 +118,7 @@
     {"name":"spr_bg5","order":9,"path":"sprites/spr_bg5/spr_bg5.yy",},
     {"name":"obj_credits","order":27,"path":"objects/obj_credits/obj_credits.yy",},
     {"name":"spr_tileset3","order":4,"path":"sprites/spr_tileset3/spr_tileset3.yy",},
+    {"name":"snd_bgm1","order":1,"path":"sounds/snd_bgm1/snd_bgm1.yy",},
     {"name":"Room_credits","order":3,"path":"rooms/Room_credits/Room_credits.yy",},
     {"name":"Room_transition3","order":2,"path":"rooms/Room_transition3/Room_transition3.yy",},
     {"name":"snd_death","order":1,"path":"sounds/snd_death/snd_death.yy",},

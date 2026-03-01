@@ -140,7 +140,7 @@ function scr_texts()
 		case("dialogue16"):
 		{
 			scr_ds_grid_add_text("...Eu sou só mais um no meio de milhões...",c_red,noone,false,f_dialogue);
-			scr_ds_grid_add_text("...",c_red,noone,false,f_dialogue);
+			scr_ds_grid_add_text("...",c_teal,noone,false,f_dialogue);
 			scr_ds_grid_add_text("Você precisa sair daqui.",c_teal,noone,false,f_dialogue);
 			scr_ds_grid_add_text("Eu preciso sair daqui.",c_red,noone,false,f_dialogue);
 			scr_ds_grid_add_text("Você precisa sair daqui.",c_teal,noone,false,f_dialogue);
@@ -166,13 +166,20 @@ function scr_texts()
 		case("death_boss"):
 		{
 			scr_ds_grid_add_text("Minhas balas parecem não surtir efeito nele...",c_red,noone,false,f_dialogue);
-			scr_ds_grid_add_text("Talvez eu possa atrasar ele até o final...?",c_red,noone,false,f_dialogue);
+			scr_ds_grid_add_text("Talvez eu possa atrasar ele até o final da estrada...?",c_red,noone,false,f_dialogue);
 			break;
 		}
 		case("death_hole"):
 		{
 			scr_ds_grid_add_text("...",c_red,noone,false,f_dialogue);
 			scr_ds_grid_add_text("Quem é o animal que constrói uma ponte assim??",c_red,noone,false,f_dialogue);
+			break;
+		}
+		case("death_hole2"):
+		{
+			scr_ds_grid_add_text("...",c_red,noone,false,f_dialogue);
+			scr_ds_grid_add_text("Como é possível eu errar uma passagem tão fácil assim???",c_red,noone,false,f_dialogue);
+			scr_ds_grid_add_text("Deve ter algo de errado comigo...",c_red,noone,false,f_dialogue);
 			break;
 		}
 	}
