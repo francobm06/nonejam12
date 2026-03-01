@@ -130,10 +130,49 @@ function scr_texts()
 			scr_ds_grid_add_text("...Eu pensei que você fosse... Eu?",c_white,obj_player,true,f_dialogue2);
 			scr_ds_grid_add_text("...Quem... é você?",c_white,obj_player,true,f_dialogue2);
 			scr_ds_grid_add_text("...",c_white,obj_trigger,true,f_dialogue2);
-			scr_ds_grid_add_text("Não era para você estar aqui.",c_white,obj_trigger,true,f_dialogue2);
-			scr_ds_grid_add_text("Quem foi que te deixou passar?",c_white,obj_trigger,true,f_dialogue2);
+			scr_ds_grid_add_text("Eu estava esperando por você.",c_white,obj_trigger,true,f_dialogue2);
 			scr_ds_grid_add_text("...",c_white,obj_player,true,f_dialogue2);
 			scr_ds_grid_add_text("...O quê?...",c_white,obj_player,true,f_dialogue2);
+			scr_ds_grid_add_text("Por favor...",c_white,obj_trigger,true,f_dialogue2);
+			scr_ds_grid_add_text("Não se mova.",c_white,obj_trigger,true,f_dialogue2);
+			break;
+		}
+		case("dialogue16"):
+		{
+			scr_ds_grid_add_text("...Eu sou só mais um no meio de milhões...",c_red,noone,false,f_dialogue);
+			scr_ds_grid_add_text("...",c_red,noone,false,f_dialogue);
+			scr_ds_grid_add_text("Você precisa sair daqui.",c_teal,noone,false,f_dialogue);
+			scr_ds_grid_add_text("Eu preciso sair daqui.",c_red,noone,false,f_dialogue);
+			scr_ds_grid_add_text("Você precisa sair daqui.",c_teal,noone,false,f_dialogue);
+			scr_ds_grid_add_text("Eu vou sair daqui.",c_red,noone,false,f_dialogue);
+			break;
+		}
+		case("dialogue17"):
+		{
+			scr_ds_grid_add_text("Assim como um grão de areia...",c_red,noone,false,f_dialogue);
+			break;
+		}
+		case("dialogue18"):
+		{
+			scr_ds_grid_add_text("Não importa o que esteja acontecendo...",c_teal,noone,false,f_dialogue);
+			scr_ds_grid_add_text("...Não importa o que eu diga...",c_teal,noone,false,f_dialogue);
+			scr_ds_grid_add_text("Nunca mais volte.",c_teal,noone,false,f_dialogue);
+			scr_ds_grid_add_text("...",c_teal,noone,false,f_dialogue);
+			scr_ds_grid_add_text("Não há nada para você aqui...",c_teal,noone,false,f_dialogue);
+			scr_ds_grid_add_text("A sua busca é em outro lugar...",c_teal,noone,false,f_dialogue);
+			scr_ds_grid_add_text("Em algum lugar no deserto... Ainda deve haver esperança...",c_teal,noone,false,f_dialogue);
+			break;
+		}
+		case("death_boss"):
+		{
+			scr_ds_grid_add_text("Minhas balas parecem não surtir efeito nele...",c_red,noone,false,f_dialogue);
+			scr_ds_grid_add_text("Talvez eu possa atrasar ele até o final...?",c_red,noone,false,f_dialogue);
+			break;
+		}
+		case("death_hole"):
+		{
+			scr_ds_grid_add_text("...",c_red,noone,false,f_dialogue);
+			scr_ds_grid_add_text("Quem é o animal que constrói uma ponte assim??",c_red,noone,false,f_dialogue);
 			break;
 		}
 	}

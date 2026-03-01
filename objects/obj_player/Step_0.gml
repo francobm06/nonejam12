@@ -19,7 +19,7 @@ switch(state)
 		else hsp_real = lerp(hsp_real, 0, decel);
 		if (hsp < 1) or (hsp > -1) and (move_h == 0) hsp = 0;
 
-		vsp = (key_down - key_up) * vsp_max;
+		if (abs(hsp_real) > 0.4) vsp = (key_down - key_up) * vsp_max;
 		break;
 	}
 	case ("stall"):
@@ -129,7 +129,7 @@ else
 	image_speed = 0;
 	image_index = 0;
 }
-if (hsp != 0) image_xscale = sign(hsp)*xscale;
+if (hsp != 0) image_xscale = sign(hsp)*abs(xscale);
 
 #endregion
 

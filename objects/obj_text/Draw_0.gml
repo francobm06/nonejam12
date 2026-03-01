@@ -7,11 +7,11 @@ if (start)
 		draw_set_color(c_black);
 		draw_roundrect_ext(x-halfw-border,y-h-(border*2),x+halfw+border,y-border,15,15,false);
 		draw_sprite(spr_marker,0,x,y-border);
-		//if (char >= string_length(text_grid[# Infos.Text, page])+120) scr_dialogue_skip();
 	}
 	else 
 	{
 		if (char >= string_length(text_grid[# Infos.Text, page])+20) draw_sprite(spr_spacebar,0,x,yy+24);
+		if (char >= string_length(text_grid[# Infos.Text, page])+240) draw_text(x-48,room_height/1.5,"(espaço)");
 	}
 
 	var _text = string_copy(text_grid[# Infos.Text, page], 0, char);

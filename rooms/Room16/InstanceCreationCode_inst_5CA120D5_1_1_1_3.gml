@@ -1,5 +1,5 @@
-alarm[0] = 17 * room_speed;
+alarm[0] = 2 * room_speed;
 action = function()
 {
-	//room_goto(Room_transition8);
+	room_goto(Room_transition15);
 }

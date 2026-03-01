@@ -75,15 +75,29 @@ switch(room)
 	case(Room_transition14): room_goto(Room15); break;
 	case(Room_cutscene4): 
 	{
+		with(obj_player) state = "stop2";
 		with(obj_player2_dummy) alarm[0] = sp;
 		with(instance_create_layer(-32,-32,"Instances",obj_trigger))
 		{
 			alarm[0] = 12 * room_speed;
 			action = function()
 			{
-				room_goto(Room16);
+				room_goto(Room_transition16);
 			}
 		}
+		instance_create_layer(0,0,"Instances",obj_static);
+		break;
+	}
+	case(Room_transition16):
+	{
+		room_goto(Room16);
+		break;
+	}
+	case(Room_transition15): room_goto(Room17); break;
+	case(Room_transition17): room_goto(Room_credits); break;
+	case(Room_die):
+	{
+		scr_transition(c_black,1,0.1,global.room_return);
 		break;
 	}
 }
